@@ -10,7 +10,7 @@ import {
 const url = "https://api.noroff.dev/api/v1/jokes/";
 const jokeContainer = document.querySelector(".jokes");
 const filterBy = document.querySelector("#filterBy");
-const loader = document.querySelector(".loader");
+// const loader = document.querySelector(".loader");
 const loaderContainer = document.querySelector(".loaderContainer");
 
 const fetchJokes = async () => {
@@ -95,7 +95,8 @@ const fetchJokes = async () => {
       }
     });
   } catch (e) {
-    console.log("Failed to fetch jokes from API" + e);
+    jokeContainer.innerHTML = 
+  "Failed to fetch jokes from Noroff Jokes API" + "" + e;
   }
 };
 
