@@ -55,6 +55,7 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
+  height: 80vh;
 }
 
 .jokeDetails {
@@ -89,8 +90,19 @@
   font-size: var(--font-size-2);
 }
 
+.punchline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: aliceblue;
+  width: 100%;
+  height: 50px;
+  font-size: var(--font-size-3);
+  transition: 0.3s ease-in-out;
+}
+
 .is-hidden {
-  display: block;
+  display: none;
 }
 
 .revealBtn {
@@ -110,6 +122,33 @@
 .revealBtn:active {
   box-shadow: 2px 3px 9px rgb(165, 165, 165);
   transform: scale(1.01);
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+}
+
+.backButton button {
+  width: 120px;
+  margin: 20px 10px ;
+  border: 1px solid transparent;
+  height: 45px;
+  transition: all .3s ease-in-out;
+}
+
+.backButton button:hover {
+  transform: scale(1.03);
+  box-shadow: 2px 3px 9px rgb(165, 165, 165);
+}
+
+.backButton button a{
+  text-decoration: none;
+  letter-spacing: 1.5px;
+  color: black;
+  cursor: pointer;
 }
 
 /* loader animation */
@@ -142,6 +181,7 @@
   border-radius: 50%;
   box-shadow: inset 0px 0px 20px black;
 }
+
 
 @keyframes spin {
   0% {
