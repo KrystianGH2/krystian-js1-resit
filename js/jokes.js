@@ -21,6 +21,13 @@ const showJokes = async () => {
   } catch (e) {
     console.log(e);
   }
+  const punchline = document.querySelector(".punchline");
+  const revealBtn = document.querySelector(".revealBtn");
+
+  revealBtn.addEventListener("click", () => {
+    punchline.classList.remove("is-hidden");
+    punchline.style.transition = "03.s ease-out";
+  });
 };
 
 showJokes();
